@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GT Portfolio | Day 4</title>
+    
+    <style>
+        body {
+            background-color: #121212;
+            color: #00ff00;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid #00ff00;
+            margin-bottom: 20px;
+            object-fit: cover;
+            box-shadow: 0 0 15px #00ff00;
+        }
+
+        h1 {
+            border: 2px solid #00ff00;
+            display: inline-block;
+            padding: 10px;
+        }
+
+        input {
+            background-color: #222;
+            border: 1px solid #00ff00;
+            color: #00ff00;
+            padding: 10px;
+            width: 260px;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        button {
+            background-color: #00ff00;
+            color: black;
+            padding: 12px 25px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: white;
+            color: black;
+            transform: scale(1.05);
+        }
+
+        hr {
+            border: 0.5px solid #333;
+            margin: 40px 0;
+            width: 80%;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+    <img src="profile.jpg" alt="My Profile" class="profile-img">
+
+    <h1>Hi, I am GOVINTHAN (GT)</h1>    
+    <p>Aspiring Full Stack Developer from Tamil Nadu.</p>
+    
+    <hr>
+
+    <h3>Contact Me</h3>
+    
+    <input type="text" id="userName" placeholder="Enter your name">
+    <br><br>
+    <input type="email" placeholder="Enter your email">
+    <br><br>
+    
+    <button onclick="greetUser()">Send Message</button>
+
+    <script>
+        function greetUser() {
+            let name = document.getElementById("userName").value;
+            if (name.trim() !== "") {
+                alert("Hi " + name + ", unga message successful-ah send aayiduchu! Day 4 Pro!");
+            } else {
+                alert("Please enter your name first, GT!");
+            }
+        }
+    </script>
+
+</body>  
+</html>
