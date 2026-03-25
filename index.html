@@ -3,96 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GT Portfolio | Day 4</title>
+    <title>GT | Full Stack Dev</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <style>
         body {
-            background-color: #121212;
+            background: #0a0a0a;
             color: #00ff00;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .card {
+            background: #151515;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 255, 0, 0.1);
+            width: 350px;
             text-align: center;
-            padding-top: 50px;
+            border: 1px solid #333;
         }
 
         .profile-img {
-            width: 150px;
-            height: 150px;
+            width: 120px;
+            height: 120px;
             border-radius: 50%;
             border: 3px solid #00ff00;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             object-fit: cover;
-            box-shadow: 0 0 15px #00ff00;
         }
 
-        h1 {
-            border: 2px solid #00ff00;
+        h1 { font-size: 1.8rem; margin: 10px 0; }
+        p { color: #888; margin-bottom: 20px; }
+
+        .skills { margin-bottom: 25px; }
+        .badge {
+            background: #222;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            margin: 3px;
             display: inline-block;
-            padding: 10px;
+            border: 1px solid #444;
         }
 
-        input {
-            background-color: #222;
-            border: 1px solid #00ff00;
+        .social-links a {
             color: #00ff00;
-            padding: 10px;
-            width: 260px;
-            border-radius: 5px;
-            outline: none;
-        }
-
-        button {
-            background-color: #00ff00;
-            color: black;
-            padding: 12px 25px;
-            border: none;
-            cursor: pointer;
-            font-weight: bold;
+            font-size: 1.8rem;
+            margin: 0 15px;
+            text-decoration: none;
             transition: 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #fff;
+            transform: translateY(-5px);
+        }
+
+        .contact-btn {
+            background: #00ff00;
+            color: #000;
+            border: none;
+            padding: 10px 25px;
             border-radius: 5px;
-        }
-
-        button:hover {
-            background-color: white;
-            color: black;
-            transform: scale(1.05);
-        }
-
-        hr {
-            border: 0.5px solid #333;
-            margin: 40px 0;
-            width: 80%;
-            display: inline-block;
+            font-weight: bold;
+            margin-top: 20px;
+            cursor: pointer;
+            width: 100%;
         }
     </style>
 </head>
 <body>
 
-    <img src="profile.jpg" alt="My Profile" class="profile-img">
+    <div class="card">
+        <img src="profile.jpg" alt="GT" class="profile-img">
+        <h1>GOVINTHAN (GT)</h1>
+        <p>Full Stack Developer | Age: 20</p>
 
-    <h1>Hi, I am GOVINTHAN (GT)</h1>    
-    <p>Aspiring Full Stack Developer from Tamil Nadu.</p>
-    
-    <hr>
+        <div class="skills">
+            <span class="badge">HTML</span>
+            <span class="badge">CSS</span>
+            <span class="badge">JavaScript</span>
+            <span class="badge">GitHub</span>
+        </div>
 
-    <h3>Contact Me</h3>
-    
-    <input type="text" id="userName" placeholder="Enter your name">
-    <br><br>
-    <input type="email" placeholder="Enter your email">
-    <br><br>
-    
-    <button onclick="greetUser()">Send Message</button>
+        <div class="social-links">
+            <a href="https://www.instagram.com/one.soul.only?igsh=MWs3ZmFkdnc2N2I1dg==" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://github.com/arugovind6-create" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
 
-    <script>
-        function greetUser() {
-            let name = document.getElementById("userName").value;
-            if (name.trim() !== "") {
-                alert("Hi " + name + ", unga message successful-ah send aayiduchu! Day 4 Pro!");
-            } else {
-                alert("Please enter your name first, GT!");
-            }
-        }
-    </script>
+        <button class="contact-btn" onclick="alert('Message Sent!')">Contact Me</button>
+    </div>
 
-</body>  
+</body>
 </html>
